@@ -1,130 +1,130 @@
-.TH simple_shell "11 May 2022" "V1.0" "simple_shell man page"
-.SH NAME				
-.B simple_shell - Simple Unix comand interpreter	
-simple_shell: the shell or command interpreter is the computer program 
-that provides a user interface to access the services of the operating system.
+.TH hsh 1 "AUGUST 14, 2021" "1.0" "hsh (simple_shell) Man Page"
 
-.SH SYNOPSYS				
-.B #include \fB"shell.h"
-
-./hsh
-/bin/[command] [option]
-[command] [option]
-
-.SH DESCRIPTION
-Shell is a user interface to use the services of a computer. 
-It can be a command-line interface –the one we will build- or graphical user interface, 
-like regular software such as Windows Office.
-
-.SH EXAMPLES
-$  /bin/ls -l
--rw-r--r-- 1 root root  114 May 11 11:50 AUTHORS                                                                                        
--rw-r--r-- 1 root root 3978 May 11 12:06 builtins.c                                                                                     
--rw-r--r-- 1 root root  487 May 11 11:10 _dollar_special.c                                                                              
--rw-r--r-- 1 root root 3934 May 11 12:06 f_alias_list.c                                                                                 
--rw-r--r-- 1 root root 1083 May 11 12:06 f_builtin_utils.c                                                                              
--rw-r--r-- 1 root root 3018 May 11 12:08 f_command_handlers.c                                                                           
--rw-r--r-- 1 root root  754 May 11 12:27 f_error.c                                                                                      
--rw-r--r-- 1 root root 1372 May 11 12:27 f_exit.c                                                                                       
--rw-r--r-- 1 root root 1910 May 11 12:27 f_handle_builtins.c                                                                            
--rw-r--r-- 1 root root  502 May 11 12:27 f_handle_comment.c                                                                             
--rw-r--r-- 1 root root  316 May 11 12:27 f_handle_enter.c                                                                               
--rw-r--r-- 1 root root 4138 May 11 12:27 f_handle_shell_logical_operators.c                                                             
--rw-r--r-- 1 root root 1271 May 18 01:11 f_linked_lists.c                                                                               
--rw-r--r-- 1 root root 1399 May 18 01:11 f_memory.c                                                                                     
--rw-r--r-- 1 root root  727 May 18 01:11 f_special.c                                                                                    
--rw-r--r-- 1 root root 1002 May 18 01:11 f_strings2.c                                                                                   
--rw-r--r-- 1 root root 1809 May 18 01:11 f_strings.c                                                                                    
--rw-r--r-- 1 root root 1238 May 18 01:11 f_strings_creations.c                                                                          
--rw-r--r-- 1 root root  363 May 11 11:50 _getenv.c                                                                                      
--rw-r--r-- 1 root root  824 May 11 11:50 _get_history_lines_count.c                                                                     
--rw-r--r-- 1 root root  818 May 11 11:50 _handle_var_replacement.c                                                                      
--rw-r--r-- 1 root root 1745 May 11 11:50 _help.c                                                                                        
--rw-r--r-- 1 root root 1587 May 11 11:50 _history.c                                                                                     
--rw-r--r-- 1 root root 1595 May 18 01:11 man_1_simple_shell                                                                             
--rw-r--r-- 1 root root  750 May 11 11:50 _own_memory.c                                                                                  
--rw-r--r-- 1 root root  232 May 11 11:50 _puts.c                                                                                        
--rw-r--r-- 1 root root 2912 May 11 11:00 README.md                                                                                      
--rw-r--r-- 1 root root 4088 May 18 01:11 shell.h                                                                                        
--rw-r--r-- 1 root root  351 May 11 11:50 _strcpy.c                                                                                      
--rw-r--r-- 1 root root  448 May 11 12:06 _strncpy.c                                                                                     
--rw-r--r-- 1 root root 1327 May 11 12:06 _strtok.c                                                                                      
--rw-r--r-- 1 root root  491 May 11 12:06 _write_history.c 
-
-$  ls -l
--rw-r--r-- 1 root root  114 May 11 11:50 AUTHORS                                                                                        
--rw-r--r-- 1 root root 3978 May 11 12:06 builtins.c                                                                                     
--rw-r--r-- 1 root root  487 May 11 11:10 _dollar_special.c                                                                              
--rw-r--r-- 1 root root 3934 May 11 12:06 f_alias_list.c                                                                                 
--rw-r--r-- 1 root root 1083 May 11 12:06 f_builtin_utils.c                                                                              
--rw-r--r-- 1 root root 3018 May 11 12:08 f_command_handlers.c                                                                           
--rw-r--r-- 1 root root  754 May 11 12:27 f_error.c                                                                                      
--rw-r--r-- 1 root root 1372 May 11 12:27 f_exit.c                                                                                       
--rw-r--r-- 1 root root 1910 May 11 12:27 f_handle_builtins.c                                                                            
--rw-r--r-- 1 root root  502 May 11 12:27 f_handle_comment.c                                                                             
--rw-r--r-- 1 root root  316 May 11 12:27 f_handle_enter.c                                                                               
--rw-r--r-- 1 root root 4138 May 11 12:27 f_handle_shell_logical_operators.c                                                             
--rw-r--r-- 1 root root 1271 May 18 01:11 f_linked_lists.c                                                                               
--rw-r--r-- 1 root root 1399 May 18 01:11 f_memory.c                                                                                     
--rw-r--r-- 1 root root  727 May 18 01:11 f_special.c                                                                                    
--rw-r--r-- 1 root root 1002 May 18 01:11 f_strings2.c                                                                                   
--rw-r--r-- 1 root root 1809 May 18 01:11 f_strings.c                                                                                    
--rw-r--r-- 1 root root 1238 May 18 01:11 f_strings_creations.c                                                                          
--rw-r--r-- 1 root root  363 May 11 11:50 _getenv.c                                                                                      
--rw-r--r-- 1 root root  824 May 11 11:50 _get_history_lines_count.c                                                                     
--rw-r--r-- 1 root root  818 May 11 11:50 _handle_var_replacement.c                                                                      
--rw-r--r-- 1 root root 1745 May 11 11:50 _help.c                                                                                        
--rw-r--r-- 1 root root 1587 May 11 11:50 _history.c                                                                                     
--rw-r--r-- 1 root root 1595 May 18 01:11 man_1_simple_shell                                                                             
--rw-r--r-- 1 root root  750 May 11 11:50 _own_memory.c                                                                                  
--rw-r--r-- 1 root root  232 May 11 11:50 _puts.c                                                                                        
--rw-r--r-- 1 root root 2912 May 11 11:00 README.md                                                                                      
--rw-r--r-- 1 root root 4088 May 18 01:11 shell.h                                                                                        
--rw-r--r-- 1 root root  351 May 11 11:50 _strcpy.c                                                                                      
--rw-r--r-- 1 root root  448 May 11 12:06 _strncpy.c                                                                                     
--rw-r--r-- 1 root root 1327 May 11 12:06 _strtok.c                                                                                      
--rw-r--r-- 1 root root  491 May 11 12:06 _write_history.c  
 .SH NAME
 
 .B simple_shell - hsh
-- command line interpreter
+- command line interpreter or shell
 
 
 .SH SYNOPSIS
-.PP
-.B ./hsh
 
+.B  ./hsh
+.I (no options included as of this writing (August 14, 2021))
 
-.PP
-.B
 .SH DESCRIPTION
 
-simple\_shell is a command line interpreter. The shell has a prompt($) and it is displayed again each time a command has been executed.
-This is a project made for the ALX software engineering program, project 0x16. C - Simple Shell.
+simple_shell, is a custom implementation of a simple UNIX shell. A minimalistic approach was taken in its design and implementation to only provide the basic functions of a shell similar to the one designed by the pioneer of UNIX shells, Ken Thompson. Design, compilation, and testing was done on Ubuntu 20.04 LTS.
 
 .SH OVERVIEW
 
-Reading from terminal, simple_shell interprets and executes commands.
+Similar to other legendary command line interfaces, the simple_shell takes input from either the terminal or scripts and executes them as they appear. 
 
 
 .SH INVOCATION
 
-Compile simple_shell with the GNU Compiler Collection, using gcc with specified flags, as per this example:
+The GNU Compiler Collectiojn, gcc, is recommended for compiling simple_shell with extra flags as shown.  
 .P
 .RS
-.B $ gcc -Wall -Werror -Wextra -pedantic shell.c -o hsh
+.B $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 .P
 .RE
-simple_shell can be invocated by typing the command shown below,Note that the prompt ('$') will appear and you will then be in interactive mode to enter commands followed by "enter."
+In interactive mode, the simple_shell works by taking user input on the terminal after pressing the enter key. Note that the prompt ('$') will appear and you will then be in interactive mode and able to enter commands followed by "enter." 
 .P
 .RS
 .B $ ./hsh
 .P
 .RE
-.SH AUTHOR'S				
--Written by Mbali Sithole and Mark Agugo
+In non-interactive mode, users can specify shell scripts to be executed by simple_shell usually through the use of pipes '|'. 
+.P
+.RS
+.B echo 'pwd' | ./hsh
+
+.SH EXECUTABLES
+
+Example of executables:
+.IP
+.br
+.\&
+.RS
+\&$ echo "Example of executables"
+.br
+\&"Example of executables"
+.br
+\&$
+
+
+.SH BUILTINS
+
+The following builtin commands are supported:
+
+.IT
+.B env
+- prints the environment variables
+
+.B exit
+- exits the program
+
+.B setenv
+- sets the environment
+
+.B unsetenv
+- removes elements from the environment
+
+Example of builtin command:
+.IP
+.br
+.\&
+.RS
+\&$ env
+.br
+\&TERM=xterm-256color
+.br
+\&SHELL=/bin/bash
+.br
+\&SSH_CLIENT=10.0.2.2 50046 22
+.br
+\&OLDPWD=/home/vagrant
+.br
+\&SSH_TTY=/dev/pts/0
+.br
+\&LC_ALL=en_US
+.br
+\&USER=vagrant
+.br
+\&MAIL=/var/mail/vagrant
+.br
+\&PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+.br
+\&PWD=/home/vagrant/simple_shell
+.br
+\&LANG=en_US.UTF-8
+.br
+\&SHLVL=1
+.br
+\&HOME=/home/vagrant
+.br
+\&LOGNAME=vagrant
+.br
+\&SSH_CONNECTION=10.0.2.2 50046 10.0.2.15 22
+.br
+\&LESSOPEN=| /usr/bin/lesspipe %s
+.br
+\&LESSCLOSE=/usr/bin/lesspipe %s %s
+br.
+\&_=./hsh
+.br
+\&$
+
 
 .SH BUGS
-There were no errors in the testing time of this code (May 11, 2022).
+No known bugs have been found/reported as of (August 14, 2021).
+Please report any issues/bugs to the contributors listed in the AUTHORs section.
+
+.SH AUTHOR
+
+Stephen Makenzi Waweru <stevomakenzi@gmail.com>
+Aloice Okoth <zacchaeusokoth4@gmail.com>
+
+
 .SH SEE ALSO
 sh
